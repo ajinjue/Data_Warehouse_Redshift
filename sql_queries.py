@@ -109,10 +109,10 @@ songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays (
                                     );
                          ALTER TABLE songplays
                                     ADD CONSTRAINT columns_fkey
-                                        FOREIGN KEY (user_id) REFERENCES users(user_id),
-                                        FOREIGN KEY (artist_id) REFERENCES artists(artist_id),
-                                        FOREIGN KEY (song_id) REFERENCES songss(song_id),
-                                        FOREIGN KEY (start_time) REFERENCES time(start_time); """)          
+                                        FOREIGN KEY (user_id) REFERENCES users (user_id),
+                                        FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
+                                        FOREIGN KEY (song_id) REFERENCES songss (song_id),
+                                        FOREIGN KEY (start_time) REFERENCES time (start_time); """)          
 print("songplays table created successfully")
 
 
