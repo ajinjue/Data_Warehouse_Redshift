@@ -93,8 +93,6 @@ time_table_create = ("""CREATE TABLE IF NOT EXISTS time (
                                     year int NOT NULL,
                                     weekday int NOT NULL
                                     ); """)
-
-
 print("time table created successfully")
 
 songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays (
@@ -107,12 +105,11 @@ songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays (
                                     location TEXT NOT NULL,
                                     user_agent TEXT NOT NULL
                                     );
-                         ALTER TABLE songplays
-                                    ADD CONSTRAINT columns_fkey
-                                        FOREIGN KEY (user_id) REFERENCES users (user_id),
-                                        FOREIGN KEY (artist_id) REFERENCES artists (artist_id),
-                                        FOREIGN KEY (song_id) REFERENCES songss (song_id),
-                                        FOREIGN KEY (start_time) REFERENCES time (start_time); """)          
+                        ALTER TABLE songplays
+                        ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(user_id),
+                        ADD CONSTRAINT fk_artist FOREIGN KEY (artist_id) REFERENCES artists(artist_id),
+                        ADD CONSTRAINT fk_song FOREIGN KEY (song_id) REFERENCES songss(song_id),
+                        ADD CONSTRAINT fk_time FOREIGN KEY (start_time) REFERENCES time(start_time); """)          
 print("songplays table created successfully")
 
 
