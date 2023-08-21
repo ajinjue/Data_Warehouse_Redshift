@@ -1,9 +1,18 @@
+# Import necessary libraries
 import configparser
 import psycopg2
 from sql_queries import create_table_queries, drop_table_queries
 
+# Define functions
 
 def drop_tables(cur, conn):
+    """
+    Function to drop existing tables in the cluster.
+    
+    Args:
+        cur: the cursor object.
+        conn = connection to Redshift Cluster.
+    """
     for query in drop_table_queries:
         print("Deleting table: ", query)
         cur.execute(query)
@@ -11,13 +20,25 @@ def drop_tables(cur, conn):
 
 
 def create_tables(cur, conn):
+    """
+    Function to create new tables in the cluster. 
+    
+    Args:
+        cur: the cursor object.
+        conn = connection to Redshift Cluster.
+    """
     for query in create_table_queries:
         print("\nCreating table: ", query)
+        print("Creation of table is completed")
         cur.execute(query)
         conn.commit()
 
 
 def main():
+    """
+    Function to connect to the Redshift Cluster, then execute the drop_tables
+    and create_tables functions above.
+    """
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
 
@@ -26,9 +47,10 @@ def main():
 
     drop_tables(cur, conn)
     create_tables(cur, conn)
-
+    
     conn.close()
 
+# main execution
 
 if __name__ == "__main__":
     main()
