@@ -69,9 +69,7 @@ start_time (timestamp), hour (smallint), day (smallint), week (smallint), month 
 
 In the executions_file.ipynb file, executing:
     **%run create_tables.py**,  <br/> and then
-    **%run etl.py**
-   
-got the job done.
+    **%run etl.py** got the job done.
 
 
 
