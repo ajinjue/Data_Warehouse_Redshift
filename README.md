@@ -72,8 +72,7 @@ start_time (timestamp), hour (smallint), day (smallint), week (smallint), month 
 In the executions_file.ipynb file, executing:
     **%run create_tables.py**,  <br/> and then
     **%run etl.py** got the job done.
-
-    ![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/6c5349a8-c6a1-471e-ab6b-7ead051cdb21)
+![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/6c5349a8-c6a1-471e-ab6b-7ead051cdb21)
 
 
 
