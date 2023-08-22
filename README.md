@@ -73,6 +73,7 @@ In the executions_file.ipynb file, executing:
     **%run create_tables.py**,  <br/> and then
     **%run etl.py** got the job done.
 
+The overall architecture below shows the flow of data:
 ![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/5e908015-82a3-4431-b31f-6465f7c6d372)
 
 
