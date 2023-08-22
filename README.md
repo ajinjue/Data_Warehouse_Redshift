@@ -60,7 +60,8 @@ artist_id (varchar), name (text), location (text), lattitude (double precision),
 
 **Time**:- timestamps of records in Songplays broken down into specific units
 start_time (timestamp), hour (smallint), day (smallint), week (smallint), month (text), year (int), weekday (text)
-![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/7ae6f18e-5ce5-43d1-bf01-b569aded37a6)
+![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/7a52b4d6-21b1-4872-b58e-09e1e8dbf565)
+
 
 ## ELT Pipeline and how to run scripts
 1. Create Amazon Redshift Cluster and connect to it
