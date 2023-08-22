@@ -4,6 +4,8 @@
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
 As their data engineer, I am tasked with building an ELT pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for our analytics team to continue finding insights into what songs our users are listening to.
+![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/fcc71d48-24bb-48ad-b2e9-d54bf4980d6f)
+
 
 ## Project Datasets
 I worked with 3 datasets that reside in S3. Here are the S3 links for each:
@@ -40,7 +42,7 @@ The project includes 7 files:
 #### i. Log data:
 artist (text), auth (varchar), firstName (text), gender (char(1)), itemInSession (int), lastName (text), length (numeric), level (char(4)), location (text), method (char(3)), page (varchar), registration (bigint), session_id (int), song (text), status (smallint), ts (bigint), userAgent (text), user_id (int)
 #### ii. Song data:
-num_songs (int), artist_id (varchar), artist_latitude (numeric), artist_longitude (numeric), artist_location (text), artist_name (text), song_id (varchar), title (text), duration (numeric), year (int)
+num_songs (int), artist_id (varchar), artist_latitude (double precision), artist_longitude (double precision), artist_location (text), artist_name (text), song_id (varchar), title (text), duration (numeric), year (int)
 
 ### Analytics Tables
 #### Fact Table
@@ -55,10 +57,12 @@ user_id (int), firstname (text), last_name (text), gender (char(1)), level (char
 song_id (varchar), title (text), artist_id (varchar), year (int), duration (numeric)
 
 **Artists**:- artists in the music database
-artist_id (varchar), name (text), location (text), lattitude (numeric), longitude (numeric)
+artist_id (varchar), name (text), location (text), lattitude (double precision), longitude (double precision)
 
 **Time**:- timestamps of records in Songplays broken down into specific units
-start_time (timestamp), hour (smallint), day (smallint), week (smallint), month (smallint), year (int), weekday (smallint)
+start_time (timestamp), hour (smallint), day (smallint), week (smallint), month (text), year (int), weekday (text)
+
+
 
 ## ELT Pipeline and how to run scripts
 1. Create Amazon Redshift Cluster and connect to it
