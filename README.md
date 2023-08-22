@@ -6,7 +6,6 @@ A music streaming startup, Sparkify, has grown their user base and song database
 As their data engineer, I am tasked with building an ELT pipeline that extracts their data from S3, stages them in Redshift, and transforms data into a set of dimensional tables for our analytics team to continue finding insights into what songs our users are listening to.
 ![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/fcc71d48-24bb-48ad-b2e9-d54bf4980d6f)
 
-
 ## Project Datasets
 I worked with 3 datasets that reside in S3. Here are the S3 links for each:
 
@@ -61,9 +60,7 @@ artist_id (varchar), name (text), location (text), lattitude (double precision),
 
 **Time**:- timestamps of records in Songplays broken down into specific units
 start_time (timestamp), hour (smallint), day (smallint), week (smallint), month (text), year (int), weekday (text)
-
-![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/9b7951c2-4dc4-44d7-afbe-ee7216655a20)
-
+![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/7ae6f18e-5ce5-43d1-bf01-b569aded37a6)
 
 ## ELT Pipeline and how to run scripts
 1. Create Amazon Redshift Cluster and connect to it
