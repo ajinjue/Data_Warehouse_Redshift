@@ -14,8 +14,9 @@ def drop_tables(cur, conn):
         conn = connection to Redshift Cluster.
     """
     for query in drop_table_queries:
-        print("Deleting table: ", query)
+        print("Dropping table: ", query)
         cur.execute(query)
+        print("Table dropped")
         conn.commit()
 
 
@@ -29,8 +30,8 @@ def create_tables(cur, conn):
     """
     for query in create_table_queries:
         print("\nCreating table: ", query)
-        print("Creation of table is completed")
         cur.execute(query)
+        print("Table completed")
         conn.commit()
 
 
