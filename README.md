@@ -62,6 +62,7 @@ artist_id (varchar), name (text), location (text), lattitude (double precision),
 **Time**:- timestamps of records in Songplays broken down into specific units
 start_time (timestamp), hour (smallint), day (smallint), week (smallint), month (text), year (int), weekday (text)
 
+![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/9b7951c2-4dc4-44d7-afbe-ee7216655a20)
 
 
 ## ELT Pipeline and how to run scripts
