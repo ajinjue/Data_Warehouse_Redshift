@@ -68,10 +68,8 @@ start_time (timestamp), hour (smallint), day (smallint), week (smallint), month 
 5. Insert data from staging tables into analytics tables
 
 In the executions_file.ipynb file, executing:
-    %run create_tables.py,  and then
-    %run etl.py
-   
-got the job done.
+    **%run create_tables.py**,  <br/> and then
+    **%run etl.py** got the job done.
 
 
 
