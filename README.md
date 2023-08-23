@@ -85,7 +85,7 @@ query = 'select count(*) from songplays'
 cur.execute(query)
 print(cur.fetchall())
 
-**Output: ** [(333,)]
+> **Output: ** [(333,)]
 
 
 
