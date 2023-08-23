@@ -77,15 +77,15 @@ In the executions_file.ipynb file, executing:
 The overall architecture below shows the flow of data:
 ![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/53489176-9ff5-4ff5-b31e-ea40da709007)
 
+## Analysis
+After loading data, I performed some SQL queries and Visualizations.
 
+An example is:
+query = 'select count(*) from songplays'
+cur.execute(query)
+print(cur.fetchall())
 
-
-
-
-
-
-
-![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/cd73bfce-e5f5-40da-b259-46b413d82f0f)
+**Output: ** [(333,)]
 
 
 
