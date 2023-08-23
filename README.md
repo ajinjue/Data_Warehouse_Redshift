@@ -100,6 +100,9 @@ Finally, the dashboad below was created in MS Power BI:
 
 ![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/79c66729-b228-42ff-b67b-1666943997e2)
 
+## Reference:
+- https://github.com/essraahmed/Data-Warehouse-With-Redshift
+
    
 
 
