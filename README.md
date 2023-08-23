@@ -97,6 +97,7 @@ I connected to and imported the data in Amazon Redshift using the following path
 4. Then expand the public schema and select the analytics tables > Load > Import > OK
 
 Finally, the dashboad below was created in MS Power BI:
+
 ![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/79c66729-b228-42ff-b67b-1666943997e2)
 
    
