@@ -88,6 +88,15 @@ An example is:  <br/>
 
    **Output**:  [(333,)]
 
+## Data Visualization with  Microsoft Power BI
+I connected and imported the data in Amazon Redshift using the following path:
+
+1. On Power BI Console > Get Data > More... > Database > Amazon Redshift > Connect
+2. Then Enter Server's endpoint and Database name > OK
+3. Then Enter Server's username and password > Ok
+4. Then expand the public schema and select the analytics tables > Load > Import > OK
+   
+
 
 
 
