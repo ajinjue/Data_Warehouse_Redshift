@@ -33,7 +33,8 @@ def insert_tables(cur, conn):
         cur.execute(query)
         print("Data insertion completed")
         conn.commit()
-
+        
+        
 def main():
     """
     Function to connect to the Redshift Cluster, then execute the load_staging_tables

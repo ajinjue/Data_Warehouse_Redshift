@@ -82,9 +82,9 @@ time_table_create = ("""CREATE TABLE IF NOT EXISTS time (
                                     hour smallint NOT NULL,
                                     day smallint NOT NULL,
                                     week smallint NOT NULL,
-                                    month TEXT NOT NULL,
+                                    month CHAR(3) NOT NULL,
                                     year int NOT NULL,
-                                    weekday TEXT NOT NULL
+                                    weekday CHAR(3) NOT NULL
                                     ); """)
 
 songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays (
@@ -128,24 +128,24 @@ songplay_table_insert = ("""INSERT INTO songplays (start_time, user_id, level, s
                                 WHERE page = 'NextSong'; """)
 
 user_table_insert = ("""INSERT INTO users (user_id, first_name, last_name, gender, level)
-                                SELECT user_id, firstName, lastName, gender, level
+                                SELECT DISTINCT user_id, firstName, lastName, gender, level
                                 FROM log_data
                                 WHERE user_id IS NOT NULL; """)
 
 song_table_insert = ("""INSERT INTO songs (song_id, title, artist_id, year, duration)
-                                SELECT song_id, title, artist_id, year, duration
+                                SELECT DISTINCT song_id, title, artist_id, year, duration
                                 FROM song_data
                                 WHERE song_id IS NOT NULL; """)
 
 time_table_insert = ("""INSERT INTO time (start_time, hour, day, week, month, year, weekday)
                                 SELECT 
-                                    start_time, 
+                                    DISTINCT start_time, 
                                     DATE_PART('hour', start_time) AS hour,
                                     DATE_PART('day', start_time) AS day,
                                     DATE_PART('week', start_time) AS week,
-                                    TO_CHAR(start_time, 'Month') AS month,
+                                    TO_CHAR(start_time, 'Mon') AS month,
                                     DATE_PART('year', start_time) AS year,
-                                    TO_CHAR(start_time, 'Day') AS weekday
+                                    TO_CHAR(start_time, 'Dy') AS weekday
                                 FROM 
                                     (
                                         SELECT 
@@ -155,10 +155,9 @@ time_table_insert = ("""INSERT INTO time (start_time, hour, day, week, month, ye
                                      ); """)
 
 artist_table_insert = ("""INSERT INTO artists (artist_id, name, location, latitude, longitude)
-                                SELECT artist_id, artist_name, artist_location, artist_latitude, artist_longitude)
+                                SELECT DISTINCT artist_id, artist_name, artist_location, artist_latitude, artist_longitude
                                 FROM song_data
                                 WHERE artist_id IS NOT NULL; """)
-
 
 
 # QUERY LISTS
