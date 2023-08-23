@@ -85,3 +85,13 @@ The overall architecture below shows the flow of data:
 
 
 
+![image](https://github.com/ajinjue/Data_Warehouse_Redshift/assets/100845693/cd73bfce-e5f5-40da-b259-46b413d82f0f)
+
+
+
+
+
+
+
+
+
