@@ -81,11 +81,12 @@ The overall architecture below shows the flow of data:
 After loading data, I performed some SQL queries and Visualizations.
 
 An example is:  <br/>
-query = 'select count(*) from songplays' <br/>
-cur.execute(query)  <br/>
-print(cur.fetchall()) <br/>
 
-**Output: ** [(333,)]
+**query = 'select count(*) from songplays'** <br/>
+**cur.execute(query)**  <br/>
+**print(cur.fetchall())** <br/>
+
+   **Output**:  [(333,)]
 
 
 
